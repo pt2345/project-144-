@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Image of my favorite places</title>
+    </head>
+    <body>
+        <style>
+        body{
+           background-color: aquamarine;
+        }
+        #about_pic_1{
+            color:burlywood;
+        }
+        #pic_1{
+            width:500px;
+            height:250px;
+        }
+        #about_pic_2{
+            color: gold;
+        }
+        </style>
+        <center>
+        <div class="image">
+            <a href="" id="link" download="Kanyankumari picture"></a>
+            <img src="kanyakumari.jpg" id="pic_1"><p id="about_pic_1" >Kanyakumari is popular because it is the only places on earth, where you can see the Sun Rise and Sun Set from the ocean. It is the only place in India where one can enjoy the unique spectacle of Sunset and Moonrise simultaneously on full moon days.
+            </p>
+            <button class="btn btn-danger" onclick="download_pic_1()">Download</button>
+        </div>
+        <br>
+        <br>
+        <div class="image_2">
+            <a href="" id="link2" download="Beasant nagar picture"></a>
+            <img src="Beasant nagar beach.jpg" id="pic_2" width="500px"><p id="about_pic_2" >Elliot's Beach, Chennai
+
+                One of the cleanest beaches in Chennai is Elliot's Beach  situated in Besant Nagar, one of the hippest neighborhoods in the city. Enveloped in a friendly vibe, it is a must-visit beach, especially in the evenings when youngsters and families throng the beach.</p>
+            <button class="btn btn-warning" onclick="download_pic_2()">Download</button>
+        </div>
+        <br>
+        <button class="btn btn-sucess" onclick="return_to_home()">Back</button>
+        </center>
+        <script>
+            function download_pic_1(){
+             
+    image= document.getElementById("pic_1").src;
+    link= document.getElementById("link");
+    link.href= image;
+    link.click();
+
+            }
+            function download_pic_2(){
+                image= document.getElementById("pic_2").src;
+    link2= document.getElementById("link2");
+    link2.href= image;
+    link2.click();
+            }
+            function return_to_home(){
+                window.location="index.html";
+            }
+        </script>
+    </body>
+</html>
